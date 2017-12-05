@@ -1,4 +1,4 @@
-﻿######################################################################
+######################################################################
 ## (C) 2017 Michael Miklis (michaelmiklis.de)
 ##
 ##
@@ -26,12 +26,12 @@ Set-StrictMode -Version latest
 function Set-MSOLLicenseToADGroupMembers {
     <#
     .SYNOPSIS
-    Assigns Office 365 Licenses to Memebers of AD-Group
+    Assigns Office 365 Licenses to Members of AD-Group
   
     .DESCRIPTION
     The Set-MSOLLicenseToADGroupMembers CMDlet gets all users from a
     specified AD-Group and assigns a specified Office 365 License to
-    the corrosponding Office 365 identities
+    the corresponding Office 365 identities
   
     .PARAMETER GroupName
     Name of the Active Group
