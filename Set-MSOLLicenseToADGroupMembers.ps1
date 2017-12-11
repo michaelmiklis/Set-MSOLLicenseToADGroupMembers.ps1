@@ -1,4 +1,4 @@
-######################################################################
+﻿######################################################################
 ## (C) 2017 Michael Miklis (michaelmiklis.de)
 ##
 ##
@@ -62,6 +62,8 @@ function Set-MSOLLicenseToADGroupMembers {
     $User = Get-ADUser -Identity $User -Properties UserPrincipalName
     $MsOlUser =  Get-MsolUser -UserPrincipalName $User.UserPrincipalName -ErrorAction SilentlyContinue 
  
+    $UserLicensePresent = $false
+
     if ($MsOlUser -ne $null) {
         Write-Host ("Found Office 365 User: " + $MsOlUser.UserPrincipalName)
             Set-MsolUser -UserPrincipalName $User.UserPrincipalName -UsageLocation $UsageLocation
